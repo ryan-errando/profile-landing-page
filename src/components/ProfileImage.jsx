@@ -1,10 +1,11 @@
 import React from 'react';
 import './ProfileImage.css';
+import blueCircle from '../assets/blue_circle.png';
 
 const ProfileImage = () => {
   return (
     <div className="profile-image-container">
-      
+      <img src={blueCircle} alt="Circle Border" className="circular-dash-ring" />
       <div className="image-wrapper">
         <img 
           src="https://oddhcouxezvvdqnbpncp.supabase.co/storage/v1/object/public/profile-landing-page/IMG_1602.JPG" 
