@@ -196,22 +196,27 @@
   margin: 0 auto;
 }
 
-.timeline-line {
-  position: absolute;
-  top: 15px;
-  bottom: 0;
-  left: 17px; /* Fits center of a 34px marker on the left */
-  width: 2px;
-  background-color: #333; /* Faint grey line */
-  z-index: 0;
-}
-
 .timeline-item {
   position: relative;
   width: 100%;
-  margin-bottom: 3.5rem;
+  padding-bottom: 3.5rem;
   padding-left: 60px;
   text-align: left;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  bottom: 0;
+  left: 17px;
+  width: 2px;
+  background-color: #333;
+  z-index: 0;
 }
 
 .timeline-marker {

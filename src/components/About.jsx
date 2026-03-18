@@ -127,7 +127,6 @@ const About = () => {
       <div className="timeline-section">
         <h3>EDUCATION & EXPERIENCE</h3>
         <div className="timeline-container">
-          <div className="timeline-line"></div>
           
           <TimelineItem 
             year="2025 - PRESENT" 
