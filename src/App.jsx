@@ -70,9 +70,15 @@ function App() {
           </div>
         )}
 
-        {showProjects && displayPage === 'work' && (
+        {displayPage === 'work' && (
           <div className="fade-in">
-            <Portfolio />
+            {showProjects ? (
+              <Portfolio />
+            ) : (
+              <h1 style={{ color: '#aaa', textAlign: 'center', marginTop: '6rem', fontStyle: 'italic' }}>
+                Projects are currently being updated. Coming soon!
+              </h1>
+            )}
           </div>
         )}
         
