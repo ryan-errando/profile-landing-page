@@ -54,7 +54,7 @@ const Contact = () => {
         </div>
 
         <div className="contact-form">
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form action="https://formspree.io/f/meervqpq" method="POST">
             <div className="form-row">
               <input type="text" name="name" placeholder="YOUR NAME" required />
               <input type="email" name="email" placeholder="YOUR EMAIL" required />
