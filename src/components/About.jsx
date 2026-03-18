@@ -95,7 +95,15 @@ const About = () => {
             <p><span>Nationality:</span> Indonesian</p>
             <p><span>Languages:</span> Indonesia, English</p>
           </div>
-          <button className="download-btn">DOWNLOAD CV <FaDownload /></button>
+          <a 
+            href="https://oddhcouxezvvdqnbpncp.supabase.co/storage/v1/object/public/profile-landing-page/Ryan%20Errando_CV.docx.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="download-btn"
+            style={{ textDecoration: 'none' }}
+          >
+            DOWNLOAD CV <FaDownload />
+          </a>
         </div>
       </div>
 

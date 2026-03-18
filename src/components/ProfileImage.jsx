@@ -1,6 +1,5 @@
 import React from 'react';
 import './ProfileImage.css';
-import profilePic from '../assets/profile_pic.png';
 import blueCircle from '../assets/blue_circle.png';
 
 const ProfileImage = () => {
@@ -11,7 +10,7 @@ const ProfileImage = () => {
       
       <div className="image-wrapper">
         <img 
-          src={profilePic} 
+          src="https://oddhcouxezvvdqnbpncp.supabase.co/storage/v1/object/public/profile-landing-page/IMG_1602.JPG" 
           alt="Ryan Errando" 
           className="profile-photo" 
         />
