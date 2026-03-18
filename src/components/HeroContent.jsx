@@ -8,11 +8,11 @@ const HeroContent = ({ onNavigate }) => {
       <div className="hero-headings">
         <h1 className="hero-title">
           - I'M <span className="highlight">RYAN ERRANDO.</span><br/>
-          COMPUTER SCIENCE STUDENT -
+          JUNIOR BACKEND DEVELOPER -
         </h1>
       </div>
       <p className="hero-description">
-        I’m a Computer Science student at Bina Nusantara University, specializing in software engineering. With a strong foundation in coding and development, I focus on building innovative software solutions and applying my technical skills to solve real-world challenges.
+        I'am a Computer Science student at Bina Nusantara University specializing in software engineering, with a strong interest in backend development. I have experience developing RESTful APIs, managing databases, and implementing business logic in scalable applications. I am continuously improving my skills to deliver robust and efficient backend solutions.
       </p>
       <button className="primary-btn" onClick={() => onNavigate && onNavigate('about')}>
         <span className="btn-text">MORE ABOUT ME</span>
