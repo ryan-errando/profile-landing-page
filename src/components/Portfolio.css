@@ -1,0 +1,121 @@
+.portfolio-section {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  color: #fff;
+}
+
+.portfolio-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-header .bg-text {
+  position: absolute;
+  font-size: 7rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.04);
+  letter-spacing: 5px;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+.portfolio-header .fg-text {
+  font-size: 3rem;
+  font-weight: 700;
+  z-index: 1;
+  text-transform: uppercase;
+}
+
+.portfolio-header .fg-text span {
+  color: var(--accent-color);
+}
+
+.portfolio-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ccc;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 4rem;
+}
+
+.project-card-dummy {
+  background-color: #2b2b2b;
+  border-radius: 12px;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card-dummy:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dummy-number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #999;
+}
+
+.more-coming {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem; 
+}
+
+.more-coming h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ccc;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.more-coming .soon-text {
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .portfolio-header .bg-text {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

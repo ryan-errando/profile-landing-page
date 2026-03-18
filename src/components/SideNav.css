@@ -1,0 +1,96 @@
+.side-nav {
+  position: fixed;
+  right: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  z-index: 100;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--nav-bg);
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.nav-item:hover {
+  background-color: var(--nav-hover);
+  transform: scale(1.1);
+}
+
+.nav-item.active {
+  background-color: var(--accent-color);
+}
+
+/* Tooltip Styles */
+.nav-label {
+  position: absolute;
+  right: 60px; /* Position to the left of the button */
+  background-color: var(--accent-color);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px; /* Arrow pointing right */
+  transform: translateY(-50%);
+  border-width: 5px 0 5px 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--accent-color);
+}
+
+.nav-item:hover .nav-label {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .nav-label {
+    right: auto;
+    bottom: 60px; /* Position above button on mobile */
+    top: auto;
+    transform: translateY(10px);
+  }
+
+  .nav-label::after {
+    top: auto;
+    bottom: -5px;
+    right: 50%;
+    transform: translateX(50%);
+    border-width: 6px 5px 0 5px;
+    border-color: var(--accent-color) transparent transparent transparent;
+  }
+
+  .nav-item:hover .nav-label {
+    transform: translateY(0);
+  }
+}

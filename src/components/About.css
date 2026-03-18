@@ -1,0 +1,285 @@
+.about-section {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  color: #fff;
+}
+
+.about-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-text {
+  position: absolute;
+  font-size: 7rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.04);
+  letter-spacing: 5px;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+.fg-text {
+  font-size: 3rem;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.fg-text span {
+  color: var(--accent-color);
+}
+
+.personal-info-card {
+  background-color: #2b2b2b;
+  border-radius: 30px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 2rem;
+  padding-left: 210px; /* Increased space for the overlapping image */
+  margin-bottom: 5rem;
+  min-height: 250px;
+}
+
+.profile-container-about {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.65); /* Combined transform for better support */
+}
+
+.info-content {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.info-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-grid p {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin: 0;
+}
+
+.info-grid p span {
+  color: #999;
+  margin-right: 0.5rem;
+}
+
+.download-btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}
+
+.skills-section {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.skills-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill-circle-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.skill-circle-bg {
+  fill: none;
+  stroke: #333;
+  stroke-width: 6;
+}
+
+.skill-circle-progress {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.skill-percentage {
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+
+.skill-name {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.timeline-section {
+  width: 100%;
+  text-align: center;
+}
+
+.timeline-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 17px; /* Fits center of a 34px marker on the left */
+  width: 2px;
+  background-color: #333; /* Faint grey line */
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 3.5rem;
+  padding-left: 60px;
+  text-align: left;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.timeline-content {
+  padding-top: 4px;
+}
+
+.timeline-year {
+  font-size: 0.75rem;
+  color: #888;
+  display: block;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.5px;
+}
+
+.timeline-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #fff;
+}
+
+.timeline-subtitle {
+  font-size: 0.9rem;
+  color: #bbb;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .personal-info-card {
+    flex-direction: column;
+    padding: 2rem;
+    padding-top: 140px; /* space for image above */
+    margin-top: 100px; /* give it space from the title because the image sticks out */
+  }
+
+  .profile-container-about {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+
+  .info-content {
+    padding-left: 0;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bg-text {
+    font-size: 5rem;
+  }
+
+
+}
