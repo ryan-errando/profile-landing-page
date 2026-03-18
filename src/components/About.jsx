@@ -137,6 +137,13 @@ const About = () => {
           />
           
           <TimelineItem 
+            year="2022 - 2025" 
+            title="Marketing Team Promotion" 
+            subtitle="BINUS University @AlamSutera" 
+            icon="work" 
+          />
+
+          <TimelineItem 
             year="2022 - 2026" 
             title="Bina Nusantara University - Computer Science" 
             icon="education" 
@@ -147,17 +154,6 @@ const About = () => {
                 • Scholarship Mentor of Computer Science 2023/2024 (even semester)
               </>
             }
-          />
-          <TimelineItem 
-            year="2022 - PRESENT" 
-            title="Marketing Team Promotion" 
-            subtitle="BINUS University @AlamSutera" 
-            icon="work" 
-          />
-          <TimelineItem 
-            year="2019 - 2022" 
-            title="SMAS Xaverius 1 Jambi" 
-            icon="education" 
           />
         </div>
       </div>
