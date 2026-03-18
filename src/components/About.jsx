@@ -96,7 +96,7 @@ const About = () => {
             <p><span>Languages:</span> Indonesia, English</p>
           </div>
           <a 
-            href="https://oddhcouxezvvdqnbpncp.supabase.co/storage/v1/object/public/profile-landing-page/Ryan%20Errando_CV.docx.pdf" 
+            href="https://oddhcouxezvvdqnbpncp.supabase.co/storage/v1/object/public/profile-landing-page/Ryan%20Errando_CV.docx.pdf?download=" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="download-btn"
