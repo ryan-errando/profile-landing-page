@@ -11,12 +11,16 @@ function App() {
   const [activePage, setActivePage] = useState('home');
   const [isAnimating, setIsAnimating] = useState(false);
   const [displayPage, setDisplayPage] = useState('home');
+  const [curtainText, setCurtainText] = useState('home');
+
+  const showProjects = import.meta.env.VITE_SHOW_PROJECTS === 'true';
 
   const handleNavigate = (page) => {
     if (page === activePage || isAnimating) return;
     
     setIsAnimating(true);
     setActivePage(page);
+    setCurtainText(page);
 
     // After the curtain drops (halfway through animation), swap the content
     setTimeout(() => {
@@ -29,6 +33,18 @@ function App() {
     }, 1200); // Total animation duration
   };
 
+  const handleMessageSent = () => {
+    if (isAnimating) return;
+    
+    setIsAnimating(true);
+    setCurtainText('MESSAGE SENT');
+
+    setTimeout(() => {
+      setIsAnimating(false);
+      setCurtainText(activePage); // Reset stealthily after animation is over
+    }, 1200);
+  };
+
   return (
     <main className="main-container">
       {/* Theatre Curtain Overlay */}
@@ -36,7 +52,7 @@ function App() {
         <div className="curtain-panel left"></div>
         <div className="curtain-panel right"></div>
         <div className="curtain-text">
-          {activePage.toUpperCase()}
+          {curtainText.toUpperCase()}
         </div>
       </div>
 
@@ -54,7 +70,7 @@ function App() {
           </div>
         )}
 
-        {displayPage === 'work' && (
+        {showProjects && displayPage === 'work' && (
           <div className="fade-in">
             <Portfolio />
           </div>
@@ -62,7 +78,7 @@ function App() {
         
         {displayPage === 'contact' && (
           <div className="fade-in">
-            <Contact />
+            <Contact onMessageSent={handleMessageSent} />
           </div>
         )}
       </div>

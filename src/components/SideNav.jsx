@@ -3,6 +3,8 @@ import './SideNav.css';
 import { FaHome, FaUser, FaBriefcase, FaEnvelope } from 'react-icons/fa';
 
 const SideNav = ({ activePage, onNavigate }) => {
+  const showProjects = import.meta.env.VITE_SHOW_PROJECTS === 'true';
+
   return (
     <nav className="side-nav">
       <button 
@@ -21,14 +23,16 @@ const SideNav = ({ activePage, onNavigate }) => {
         <FaUser />
         <span className="nav-label">ABOUT</span>
       </button>
-      <button 
-        onClick={() => onNavigate('work')} 
-        className={`nav-item ${activePage === 'work' ? 'active' : ''}`}
-        aria-label="Work"
-      >
-        <FaBriefcase />
-        <span className="nav-label">PORTFOLIO</span>
-      </button>
+      {showProjects && (
+        <button 
+          className={`nav-item ${activePage === 'work' ? 'active' : ''}`}
+          onClick={() => onNavigate('work')}
+          aria-label="Projects"
+        >
+          <FaBriefcase />
+          <span className="nav-label">PROJECTS</span>
+        </button>
+      )}
       <button 
         onClick={() => onNavigate('contact')} 
         className={`nav-item ${activePage === 'contact' ? 'active' : ''}`}

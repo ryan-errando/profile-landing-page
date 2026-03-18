@@ -11,7 +11,33 @@ import {
   FaPaperPlane 
 } from 'react-icons/fa';
 
-const Contact = () => {
+const Contact = ({ onMessageSent }) => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/meervqpq", {
+        method: "POST",
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      if (response.ok) {
+        form.reset();
+        if (onMessageSent) {
+          onMessageSent();
+        }
+      } else {
+        alert("Oops! There was a problem submitting your form");
+      }
+    } catch (error) {
+      alert("Oops! There was a problem submitting your form");
+    }
+  };
+
   return (
     <section className="contact-section">
       <div className="contact-header">
@@ -46,15 +72,14 @@ const Contact = () => {
           </div>
 
           <div className="social-links">
-            <a href="#" className="social-icon"><FaLinkedinIn /></a>
-            <a href="#" className="social-icon"><FaInstagram /></a>
-            <a href="#" className="social-icon"><FaTwitter /></a>
-            <a href="#" className="social-icon"><FaGithub /></a>
+            <a href="https://www.linkedin.com/in/ryan-errando-re180804/" target="_blank" rel="noopener noreferrer" className="social-icon"><FaLinkedinIn /></a>
+            <a href="https://www.instagram.com/ryan.errando/" target="_blank" rel="noopener noreferrer" className="social-icon"><FaInstagram /></a>
+            <a href="https://github.com/ryan-errando" target="_blank" rel="noopener noreferrer" className="social-icon"><FaGithub /></a>
           </div>
         </div>
 
         <div className="contact-form">
-          <form action="https://formspree.io/f/meervqpq" method="POST">
+          <form onSubmit={handleSubmit}>
             <div className="form-row">
               <input type="text" name="name" placeholder="YOUR NAME" required />
               <input type="email" name="email" placeholder="YOUR EMAIL" required />
